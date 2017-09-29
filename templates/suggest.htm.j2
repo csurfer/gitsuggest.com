@@ -1,0 +1,33 @@
+{% extends "base.htm.j2" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Welcome {{ user_login }}!</h1>
+    <p>Based on the repositories you have starred, we think you might like these repositories too...</p>
+</div>
+
+<section class="col-xs-12 col-sm-6 col-md-12">
+    {% for repo in repos %}
+
+    <article class="search-result row">
+        <div class="col-xs-12 col-sm-12 col-md-1">
+            <a href="{{ repo.full_name }}" target="_blank" class="thumbnail">
+                <img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/64/social_media_logo_github-64.png" />
+            </a>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-11">
+            <h3>
+                <a href="https://github.com/{{ repo.full_name }}" target="_blank">{{ repo.full_name }}</a>
+            </h3>
+            <p>{{ repo.language }} (&starf; {{ repo.stargazers_count }})
+            <p>{{ repo.description }}</p>
+        </div>
+        <span class="clearfix borda"></span>
+        <hr>
+    </article>
+
+    {% endfor %}
+</section>
+
+{% endblock %}
