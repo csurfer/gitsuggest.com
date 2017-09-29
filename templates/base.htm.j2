@@ -25,6 +25,9 @@
     </script>
     <link
         rel="stylesheet"
+        href="{{ url_for('static', filename='css/beta.css') }}">
+    <link
+        rel="stylesheet"
         href="{{ url_for('static', filename='css/search.css') }}">
     <link
         rel="stylesheet"
@@ -43,11 +46,12 @@
 
 <body>
     <div class="container">
+        <div class="ribbon"><span>BETA</span></div>
         <div class="row">
             <div class="col-md-3">
                 <div class="sidebar-nav-fixed">
                     <div class="well">
-                        <ul class="nav ">
+                        <ul class="nav">
                             <img src="{{ url_for('static', filename='images/logo.png') }}">
                             <a
                                 class="github-button"
@@ -86,11 +90,13 @@
                                     <a
                                         class="github-button"
                                         href="https://github.com/csurfer"
-                                        aria-label="Follow @csurfer on GitHub">Follow @csurfer</a><br>
+                                        aria-label="Follow @csurfer on GitHub"
+                                        data-size="large">Follow @csurfer</a><br>
                                     <a
                                         class="twitter-follow-button"
                                         href="https://twitter.com/sharmavishwas7"
-                                        data-show-count="false">Follow @sharmavishwas7</a><br>
+                                        data-show-count="false"
+                                        data-size="large">Follow @sharmavishwas7</a><br>
                                 </div>
                             </div>
 
