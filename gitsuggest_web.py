@@ -68,10 +68,17 @@ def callback():
 @requires_auth
 def suggest():
     gs = GitSuggest(token=session['token'])
-    return render_template(
-        'suggest.htm.j2',
-        user_login=gs.github.get_user().login,
-        repos=gs.get_suggested_repositories())
+    gs_repos = list(gs.get_suggested_repositories())
+
+    if gs_repos:
+        return render_template(
+            'suggest.htm.j2',
+            user_login=gs.github.get_user().login,
+            repos=gs_repos)
+    else:
+        return render_template(
+            '404.htm.j2',
+            user_login=gs.github.get_user().login)
 
 
 if __name__ == '__main__':

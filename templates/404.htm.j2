@@ -1,0 +1,45 @@
+{% extends "base.htm.j2" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Sorry {{ user_login }}!</h1>
+</div>
+
+<div class="jumbotron">
+    <p>We weren't able to find repositories you might be interested in based
+    on what you have already starred.</p>
+</div>
+
+<div class="jumbotron">
+    <p>
+
+    Here are links to trending repositories on
+    <a href="https://github.com" target="_blank">Github</a> for you to start your
+    journey !
+
+    <br><hr/>
+
+    </p>
+    <p class="lead" style="margin-bottom:-15px">
+        <a
+            class="btn btn-primary btn-lg"
+            href="https://github.com/trending"
+            role="button"
+            target="_blank">
+            Trending repositories on GitHub
+        </a>
+    </p>
+    <br><br>
+    <p class="lead" style="margin-bottom:-15px">
+        <a
+            class="btn btn-primary btn-lg"
+            href="https://github.com/trending/developers"
+            role="button"
+            target="_blank">
+            Trending developers on GitHub
+        </a>
+    </p>
+</div>
+
+{% endblock %}
