@@ -2,14 +2,11 @@
 
 {% block content %}
 
-<div class="jumbotron">
-    <h1>gitSuggest</h1>
-    <p>A tool to suggest github repositories based on the repositories you have shown interest in.</p>
-</div>
-
-<div class="jumbotron">
-    <p>
-
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">About</h4>
+    <hr/>
+    <p class="card-text">
     One quick way to level up as a programmer, is by reading code written by
     smart people. Github makes finding such code/repositories easy. At the
     end of the day, we all are interested in our own specific areas and we
@@ -21,20 +18,20 @@
 
     This is a pet project of a philomath and in no way associated
     with <a href="https://github.com/" target="_blank">GitHub</a>.
-
-    <br><br>
-
     </p>
+
+    <hr/>
+    <br>
     <p class="lead" style="margin-bottom:-15px">
         <div align="center">
-        <a
-            class="btn btn-success btn-lg"
-            href="/login"
-            role="button">
-            Login using GitHub
-        </a>
+            <button
+                type="submit"
+                onclick="myLoadingFunction();"
+                id="login"
+                class="btn btn-success btn-lg">Login using GitHub</button>
         </div>
     </p>
+  </div>
 </div>
 
 {% endblock %}

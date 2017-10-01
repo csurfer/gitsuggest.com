@@ -30,6 +30,14 @@ def requires_auth(f):
     return decorated
 
 
+class T(object):
+    def __init__(self, full_name, language, stargazers_count, description):
+        self.full_name = full_name
+        self.language = language
+        self.stargazers_count = stargazers_count
+        self.description = description
+
+
 @app.route('/')
 def home():
     return render_template('login.htm.j2')
